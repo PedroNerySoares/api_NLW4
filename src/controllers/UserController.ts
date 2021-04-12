@@ -54,7 +54,7 @@ class UserController{
         const userRepository = getCustomRepository(UsersRepository);
         const all =await userRepository.find();
 
-        response.json(all)
+        response.status(201).json(all)
 
     }
      
