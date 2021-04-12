@@ -3,7 +3,8 @@ import express from 'express'
 import createConnection from './database/index'
 import { router } from './router';
 
-console.log("estou aqui")
+
+
 createConnection()
 const app = express();
 

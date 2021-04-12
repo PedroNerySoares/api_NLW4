@@ -8,7 +8,7 @@ const userController= new UserController();
 const surveyController = new SurveyController();
 
 
-router.get("/useruser",userController.show)
+router.get("/showsusers",userController.show)
 router.post("/user",userController.Create)
 
 router.get("/showsurveys",surveyController.show)
