@@ -32,7 +32,7 @@ class UserController{
             
         await userRepository.save(user)
         console.log(user) 
-        return response.json(user);
+        return response.status(201).json(user);
        
 
       // return response.send() 
@@ -54,7 +54,7 @@ class UserController{
         const userRepository = getCustomRepository(UsersRepository);
         const all =await userRepository.find();
 
-        response.status(201).json(all)
+        response.json(all)
 
     }
      

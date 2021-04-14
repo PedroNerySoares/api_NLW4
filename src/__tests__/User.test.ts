@@ -1,19 +1,21 @@
 import request from 'supertest';
-import { DriverOptionNotSetError } from 'typeorm';
 import { app } from '../app';
 
-import createConnection from '../database/index'
+import createConnection from '../database'
 
-describe("/user",async ()=>{
+describe("/Users", ()=>{
     beforeAll(async()=>{
         const connection = await createConnection();
         await connection.runMigrations();
-    });
+        console.log("teste passou aqui444")
+    })
     
     it("Should be able to create a new user",async() =>{
         const response = await request(app).post("/user").send({
-            email:"examplename@gmail.com",
-            name:"UserExample"
+
+            name:"UserExample2",
+            email:"examplename2@gmail.com"
+            
         })
 
         expect(response.status).toBe(201)
